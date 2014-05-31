@@ -1,0 +1,25 @@
+<div class="navbar-wrapper">
+  <div class="container">
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <%= link_to("Car-Care", root_path, :class => "navbar-brand") %>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to("Home", root_path) %></li>
+            <li><%= link_to("Service", service_path) %></li>
+            <li><%= link_to("Promotions", promotion_path) %></li>
+            <li><%= link_to("Contact Us", contact_path) %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

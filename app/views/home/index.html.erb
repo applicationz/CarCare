@@ -1,0 +1,96 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	</ol>
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<%= image_tag("dummy1.jpg", :class => 'displayed') %>
+			<div class="carousel-caption">
+				1
+			</div>
+		</div>
+		<div class="item">
+			<%= image_tag("dummy2.jpg", :class => 'displayed') %>
+			<div class="carousel-caption">
+				2
+			</div>
+		</div>
+		<div class="item">
+			<%= image_tag("dummy3.png", :class => 'displayed') %>
+			<div class="carousel-caption">
+				3
+			</div>
+		</div>
+	</div>
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>
+<div class="container marketing">
+	<!-- Three columns of text below the carousel -->
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<% @pro.each do |p| %>
+			<div class="col-lg-4">
+				<img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjcwIiB5PSI3MCIgc3R5bGU9ImZpbGw6I2FhYTtmb250LXdlaWdodDpib2xkO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtZmFtaWx5OkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmO2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjE0MHgxNDA8L3RleHQ+PC9zdmc+" style="width: 140px; height: 140px;">
+				<h2> <%= p.name %> </h2>
+				<p> <%= p.description %></p>
+				<p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+				</div><!-- /.col-lg-4 -->
+				<% end %>
+			</div>
+			</div><!-- /.row -->
+			<!-- START THE FEATURETTES -->
+			<hr class="featurette-divider">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1">
+					<div class="row featurette">
+						<div class="col-md-7">
+							<h2 class="featurette-heading"> <%= @ser[0].name %> </h2>
+							<p> Price : <%= @ser[0].description %> </p>
+							<p> Price : <%= @ser[0].price %> </p>
+						</div>
+						<div class="col-md-5">
+							<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=">
+						</div>
+					</div>
+					<hr class="featurette-divider">
+					<div class="row featurette">
+						<div class="col-md-5">
+							<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=">
+						</div>
+						<div class="col-md-7">
+							<h2 class="featurette-heading"> <%= @ser[1].name %> </h2>
+							<p> Price : <%= @ser[1].description %> </p>
+							<p> Price : <%= @ser[1].price %> </p>
+						</div>
+					</div>
+					<hr class="featurette-divider">
+					<div class="row featurette">
+						<div class="col-md-7">
+							<h2 class="featurette-heading"> <%= @ser[2].name %> </h2>
+							<p> Price : <%= @ser[2].description %> </p>
+							<p> Price : <%= @ser[2].price %> </p>
+						</div>
+						<div class="col-md-5">
+							<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjMxcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L3N2Zz4=">
+						</div>
+					</div>
+					<hr class="featurette-divider">
+				</div>
+			</div>
+			<!-- /END THE FEATURETTES -->
+			<!-- FOOTER -->
+			
+		</div>
+		<script type="text/javascript">
+		$('.carousel').carousel('cycle')
+		</script>
